@@ -18,7 +18,7 @@ def entropy(examples):
     pos = 0.0
     neg = 0.0
     for _, row in examples.iterrows():
-      if row["answer"] == "yes":
+      if row["play"] == "yes":
         pos += 1
       else:
         neg += 1
@@ -65,7 +65,7 @@ def ID3(examples, attrs):
         newNode = Node()
         newNode.isLeaf = True
         newNode.value = u
-        newNode.pred = np.unique(subdata["answer"])
+        newNode.pred = np.unique(subdata["play"])
         root.children.append(newNode)
       else:
         dummyNode = Node()
@@ -102,5 +102,5 @@ print("Decision Tree is:")
 printTree(root)
 print ("------------------")
 
-new = {"outlook":"sunny", "temperature":"hot", "humidity":"normal", "wind":"strong"}
+new = {"outlook":"sunny", "temp":"hot", "humidity":"normal", "wind":"strong"}
 classify (root, new)
