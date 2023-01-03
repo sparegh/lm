@@ -4,7 +4,7 @@ import numpy as np
 
 data = pd.read_csv( "datasetprog4.csv")
 features = [feat for feat in data]
-features.remove("answer")
+features.remove("play")
 
 
 class Node:
