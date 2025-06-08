@@ -108,10 +108,12 @@ def heuristic(n):
     }
     return H_dist[n]
     print('H_dist[n]', H_dist[n])
-Graph_nodes = {
-    'S': [('A', 1), ('B', 4)],
-    'A': [('B', 2), ('D', 12)],
-    'B': [('C', 2)],
-    'C': [('D', 3)],
-}
-aStarAlgo('S', 'D')
+# Graph_nodes = {
+#     'S': [('A', 1), ('B', 4)],
+#     'A': [('B', 2), ('D', 12)],
+#     'B': [('C', 2)],
+#     'C': [('D', 3)],
+# }
+# aStarAlgo('S', 'D')
+
+print('hello')
